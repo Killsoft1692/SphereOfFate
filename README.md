@@ -1,1 +1,1 @@
-Thia is Sphere of Fate
+This is Sphere of Fate

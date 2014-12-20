@@ -1,0 +1,3 @@
+sphere:
+    path: /sphere
+    defaults: { _controller: AcmeSphereOfFateBundle:Sphere:index}

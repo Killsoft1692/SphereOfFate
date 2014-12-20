@@ -3,5 +3,9 @@
 {% dump %}
 
 {% block body %}
-    <h1>{{ result }}</h1>
+    {% if result == 'No, maybe tomorrow will be your day'%}
+    <font color="#dc143c"><h1>{{ result }}</h1></font>
+        {% else  %}
+            <font color="#006400"><h1>{{ result }}</h1></font>
+        {% endif %}
 {% endblock %}

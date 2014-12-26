@@ -3,6 +3,26 @@
 {% block body %}
     {% dump %}
 
+    {% block lang %}
+
+    <div class="block" >
+        <h4>language</h4>
+
+        <a href="http://localhost/symfony2/web/app_dev.php/ru/main">
+            <button type="button" class="btn btn-primary">
+                ru
+            </button>
+        </a>
+
+        <a href="http://localhost/symfony2/web/app_dev.php/en/main">
+            <button type="button" class="btn btn-primary">
+                en
+            </button>
+        </a>
+    </div>
+
+    {% endblock %}
+
 <center>
 
     <font color="#ff8c00" xmlns="http://www.w3.org/1999/html">
@@ -24,6 +44,7 @@
         </div>
 
     </form>
+
 </center>
 
 {% endblock %}

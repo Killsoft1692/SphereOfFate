@@ -16,7 +16,7 @@ class SphereController extends Controller
      * @param Request $request
      * @internal param $product
      * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
-     * @Route("/main")
+     * @Route("/{_locale}/sphere", requirements={"locale":"ru|en"}, defaults={"locale":"en"})
      */
     public function newAction(Request $request)
     {
@@ -31,7 +31,7 @@ class SphereController extends Controller
             $em->persist($event);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('sphere'));
+            return $this->redirect($this->generateUrl('/{_locale}/sphere/answer'));
         }
 
         return $this->render('AcmeSphereOfFateBundle:Default:index.html.twig', array(
@@ -41,7 +41,7 @@ class SphereController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/sphere")
+     * @Route("/{_locale}/sphere/answer", requirements={"locale":"ru|en"}, defaults={"_locale": "en"})
      */
     public function indexAction()
     {

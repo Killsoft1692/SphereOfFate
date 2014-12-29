@@ -5,7 +5,11 @@
 
 <center>
 
-    <font color="#ff8c00" xmlns="http://www.w3.org/1999/html"> <h1>Sphere of Fate</h1></font>
+    <font color="#ff8c00" xmlns="http://www.w3.org/1999/html">
+
+        <h1> {{ 'Sphere of Fate'|trans|raw }} </h1>
+
+    </font>
 
     <form action="#" method="post" {{ form_enctype(form) }}>
 
@@ -14,7 +18,8 @@
             {{ form_widget(form.data)}}
         </div>
         <div>
-        <br>{{ form_widget(form.save) }}
+        <br>
+            {{ form_widget(form.save) }}
         {{ form_rest(form) }}
         </div>
 

@@ -2,7 +2,6 @@
 
 namespace Acme\SphereOfFateBundle\Controller;
 
-
 use Acme\SphereOfFateBundle\Form\Type\EventType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;

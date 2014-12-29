@@ -2,7 +2,7 @@
 
 {% dump %}
 
-{% block body %}{{ "now"|date }}
+{% block body %}{{ "now"|date}}
 
   {% if result == 'No, maybe tomorrow will be your day'%}
 
@@ -14,6 +14,7 @@
   {% endif %}
 
     <br>
-    <a href="{{ path('acme_sphereoffate_sphere_new') }}"><button type="button" class="btn btn-primary">Go to sphere</button></a>
+    <a href="{{ path('acme_sphereoffate_sphere_new') }}"><button type="button" class="btn btn-primary">
+            {{ 'Go to sphere'|trans|raw }}</button></a>
 
 {% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% dump %}
+
+{% block body %}{{ "now"|date }}
+
+  {% if result == 'No, maybe tomorrow will be your day'%}
+
+      <font color="#dc143c"><h1>{{ result|trans|raw }}</h1></font>
+        {% else  %}
+
+            <font color="#006400"><h1>{{ result|trans|raw }}</h1></font>
+
+  {% endif %}
+
+    <br>
+    <a href="{{ path('acme_sphereoffate_sphere_new') }}"><button type="button" class="btn btn-primary">Go to sphere</button></a>
+
+{% endblock %}

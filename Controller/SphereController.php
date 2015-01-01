@@ -47,7 +47,7 @@ class SphereController extends Controller
     public function indexAction()
     {
         return $this->render('AcmeSphereOfFateBundle:Default:new.html.twig',array(
-            'result'=>$this->get('confirm')->Random()
+            'result'=>$this->get('confirm')->random()
         ));
     }
 

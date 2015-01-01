@@ -1,7 +1,24 @@
-{% extends 'base.html.twig' %}
-
-{% dump %}
+{% extends '::base.html.twig' %}
 
 {% block body %}
-<h1>{{ result }}</h1>
+    {% dump %}
+
+<center>
+
+    <font color="#ff8c00" xmlns="http://www.w3.org/1999/html"> <h1>Sphere of Fate</h1></font>
+
+    <form action="#" method="post" {{ form_enctype(form) }}>
+
+        <div class="border-r">
+            {{ form_label(form.data, 'Enter your question') }}<br>
+            {{ form_widget(form.data)}}
+        </div>
+        <div>
+        <br>{{ form_widget(form.save) }}
+        {{ form_rest(form) }}
+        </div>
+
+    </form>
+</center>
+
 {% endblock %}

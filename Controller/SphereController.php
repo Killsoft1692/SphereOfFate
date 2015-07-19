@@ -16,7 +16,7 @@ class SphereController extends Controller
      * @param Request $request
      * @internal param $product
      * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
-     * @Route("/main")
+     * @Route("/{_locale}/main", defaults={"_locale": "en"}, requirements={"_locale": "en|ru"})
      */
     public function newAction(Request $request)
     {
@@ -41,7 +41,7 @@ class SphereController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/sphere")
+     * @Route("/{_locale}/sphere", defaults={"_locale": "ru"}, requirements={"_locale": "en|ru"})
      */
     public function indexAction()
     {
